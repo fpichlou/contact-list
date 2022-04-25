@@ -26,7 +26,7 @@ const Tabs = (props)=> {
           ))}
         </ul>
         <div className="tabs__panel" data-tab-index={selectedTab}>
-          {tabs[selectedTab].props.children}
+          {tabs[selectedTab]?.props.children}
         </div>
       </div>
     )}
