@@ -5,7 +5,10 @@ import './ContactCard.scss'
 const ContactCard = (props)=> {
     const {data, onClose} = props;
     const cardRef = useRef();
+
+    // Set focus on the card to handle onBlur event
     useEffect(()=> {cardRef.current.focus()},[])
+    
     return (
         <div className="contact-card__container">
             <div className="contact-card" ref={cardRef} onBlur={onClose} tabIndex={0}> 

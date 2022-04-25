@@ -6,6 +6,7 @@ import { alphabets, groupBy, sortObjectArray } from './utils/global';
 import Tabs from './components/Tabs';
 import ContactItem from './components/ContactItem';
 import ContactCard from './components/ContactCard';
+import { ReactComponent as Logo } from './assets/images/logo.svg'
 import './assets/styles/main.scss'
 import './App.scss';
 
