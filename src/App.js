@@ -4,9 +4,10 @@ import { getContactList } from './redux/contacts/action';
 import { selectContactList } from './redux/contacts/selector';
 import { alphabets, groupBy, sortObjectArray } from './utils/global';
 import Tabs from './components/Tabs';
+import Tab from './components/Tab';
 import ContactItem from './components/ContactItem';
 import ContactCard from './components/ContactCard';
-import { ReactComponent as Logo } from './assets/images/logo.svg'
+// import { ReactComponent as Logo } from './assets/images/logo.svg';
 import './assets/styles/main.scss'
 import './App.scss';
 
@@ -55,7 +56,8 @@ function App() {
               const groupedContact = getGroupedContacts(alphabet);
               const tabData = { 'title': alphabet, 'count': groupedContact?.length }
               return (
-                <div data={tabData} key={alphabet} disabled={!groupedContact?.length}>
+                <Tab data={tabData} key={alphabet} disabled={!groupedContact?.length}>
+                  {/* <Logo /> */}
                   <div className='grid-container'>
                     <div className="grid-container__row">
                       {groupedContact?.map((contact) => {
@@ -68,7 +70,7 @@ function App() {
                       })}
                     </div>
                   </div>
-                </div>
+                </Tab>
               )
             })}
           </Tabs>
