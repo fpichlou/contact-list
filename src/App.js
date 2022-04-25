@@ -57,7 +57,6 @@ function App() {
               const tabData = { 'title': alphabet, 'count': groupedContact?.length }
               return (
                 <Tab data={tabData} key={alphabet} disabled={!groupedContact?.length}>
-                  {/* <Logo /> */}
                   <div className='grid-container'>
                     <div className="grid-container__row">
                       {groupedContact?.map((contact) => {

@@ -4,7 +4,6 @@ import './Tabs.scss';
 
 const Tabs = (props)=> {
     const {children, activeTabIndex=0} = props
-    const tabs = children.filter(tab=> tab.type.name==="Tab");
     const [selectedTab, setSelectedTab] = useState(activeTabIndex)
     useEffect(()=> {
         setSelectedTab(activeTabIndex)
@@ -13,7 +12,7 @@ const Tabs = (props)=> {
     return (
       <div className="tabs__container">
         <ul className="tabs" data-selected-index={selectedTab}>
-          {tabs.map((tab, index) => (
+          {children.map((tab, index) => (
             <TabTitle
               key={index}
               title={tab.props.title}
@@ -26,7 +25,7 @@ const Tabs = (props)=> {
           ))}
         </ul>
         <div className="tabs__panel" data-tab-index={selectedTab}>
-          {tabs[selectedTab]?.props.children}
+          {children[selectedTab]?.props.children}
         </div>
       </div>
     )}
