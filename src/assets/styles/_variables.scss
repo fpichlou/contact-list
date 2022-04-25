@@ -1,0 +1,19 @@
+// Responsive breakpoints
+$bp-xs: 320;
+$bp-sm: 480;
+$bp-md: 768;
+$bp-lg: 1024;
+$bp-xl: 1200;
+
+// Color system
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dfe1e5 !default;
+$gray-650: #69676d !default;
+
+$primary: #febc22;
+$secondary: #140a33;
+
+$border: 1px solid $gray-300;
+$light-shadow:rgba(0, 0, 0, 0.1) 0px 3px 5px;
+

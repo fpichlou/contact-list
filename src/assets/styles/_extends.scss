@@ -1,0 +1,9 @@
+@import 'variables';
+
+%card {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: $light-shadow;
+    overflow: hidden;
+}

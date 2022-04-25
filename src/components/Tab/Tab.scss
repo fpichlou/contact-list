@@ -1,0 +1,44 @@
+@import '../../assets/styles/mixins';
+
+.tab {
+    &__title {
+        display: inline-flex;
+        padding: 0.4rem;
+        border-right: 1px solid $gray-650;
+        @include create-mq($bp-sm, 'max') {
+            display: flex;
+            border-bottom: 1px solid $gray-650;
+            border-right: unset;
+        }
+        &:last-child {
+            border-bottom: unset;
+            border-right: unset;
+        }
+        button {
+            width: 32px;
+            height: 32px;
+        }
+        &--active {
+            border: 1px solid $primary !important;
+            border-radius: 4px;
+            color: $primary;
+        }
+        &--disabled {
+            color: $gray-650;
+            button {
+                color: inherit;
+                font-weight: normal;
+            }
+        }
+        & * {
+            color: inherit;
+            font-weight: bold;
+        }
+        span {
+            font-size: 12px;
+            font-weight:400;
+            margin-left: auto;
+            align-self: flex-end;
+        }
+    }
+}

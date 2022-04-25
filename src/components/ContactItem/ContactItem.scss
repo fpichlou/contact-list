@@ -1,0 +1,30 @@
+@import '../../assets/styles/variables'; 
+
+.contact {
+    display: flex;
+    align-items: center;
+    color: #140a33;
+    box-shadow: $light-shadow;
+    background-color: #fff;
+    border-radius: 4px;
+
+    &:hover{
+      cursor: pointer;
+    }
+    &__picture {
+      width: 48px;
+      border-radius: 50%;
+      border: 2px solid $gray-200;
+      margin: 4px 8px;
+    }
+    &__name {
+        flex: 1;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+    }
+    &__lastname {
+      font-weight: 500;
+      margin-left: 2px;
+    }
+  }
