@@ -1,6 +1,7 @@
 # Contact list application based on Reactjs
 
-You can see the [live version](http://fpichlou.github.io/contact-list).
+You can see the [live version](http://fpichlou.github.io/contact-list).\
+The size of results is set to `200 contacts`.
 
 ## Available Scripts
 
